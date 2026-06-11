@@ -38,10 +38,7 @@ export default function FraseCard({ momento, index = 0 }: FraseCardProps) {
       </p>
 
       {/* Rodapé */}
-      <div className="mt-6 space-y-1 border-t border-white/5 pt-4">
-        <p className="font-serif text-white/70 text-sm text-center tracking-wide">
-          {momento.titulo}
-        </p>
+      <div className="mt-6 border-t border-white/5 pt-4">
         <p className="text-white/30 text-xs text-center">
           {formatarData(momento.data)}
         </p>
