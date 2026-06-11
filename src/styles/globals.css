@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0F0F0F;
+  --foreground: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Scrollbar invisível no Chrome/Safari */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Inputs dark */
+input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Safe area para notch/barra home */
+.pb-safe {
+  padding-bottom: max(8px, env(safe-area-inset-bottom));
+}
